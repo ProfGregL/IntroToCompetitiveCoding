@@ -1,0 +1,39 @@
+Zybook 1.15  binary index representation fo combinations, unordered list
+
+Good morning! Here's your coding interview problem for today.
+This problem was asked by Amazon.
+Given a sorted array, find the smallest positive integer that is
+ not the sum of a subset of the array.
+For example, for the input [1, 2, 3, 10], you should return 7.
+Do this in O(N) time.
+
+subset allows duplicates!!!
+
+	1  2  3  4
+1	1  1  1  1
+2   1  3  3  3
+3   1  3  6  6
+10  1  3  6  16 
+
+
+{1}         1
+{1,2}       1,2,3
+{1,2,3}     1,2,3,4,5,6
+{1,2,3,10}  1,2,3,4,5,6,10,11,12,13,14,15,16
+
+0001   1
+0010   2
+0011   1,2
+0100   3
+0101   1,3
+0110   2,3
+0111   1,2,3
+1000   10
+1001   1,10
+1010   2,10
+
+...
+
+if there is 4 numbers, then for 0 to four 1's or 7 use the numbers to generate sums, 
+put in unordered list
+then starting at zero query list for first non sequential number
