@@ -20,6 +20,10 @@ Let's define a "sevenish" number to be one which is either a power of 7,
   7^4 = 2401 	
  
  The power term dominates all of the sum terms so there will never be any over lap
+
+Create vecto result
+Create Queue Q
+Create integer temp
  
  put first power term in queue Q and in result vector  1
  put second power term in queue Q and in temp and in  result vector  7
