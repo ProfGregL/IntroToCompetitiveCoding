@@ -1,0 +1,33 @@
+ Run of Ones
+ 
+Problem Description:
+
+This problem was asked by Stripe.
+Given an integer n, return the length of the longest consecutive run of 1s in its binary representation.
+For example, given 156, you should return 3
+
+156 in binary -> 10011100 
+
+
+
+create binary string representation  bs 
+starting from left i = 0
+
+count = 0
+max count = 0
+
+while i < length of string {
+if bs[i] == 1{
+	count ++ 
+	}
+if bs[i] == 0  run is over,  check for max
+	if count > maxcount{
+ 	maxcount = count  
+	count = 0
+	}
+	
+if bs[i] == EOF{
+		return maxcount	
+	}
+i++
+}
