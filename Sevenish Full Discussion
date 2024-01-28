@@ -1,0 +1,40 @@
+Good morning! Here's your coding interview problem for today.
+This problem was asked by Zillow.
+Let's define a "sevenish" number to be one which is either a power of 7,
+ or the sum of unique powers of 7. 
+ The first few sevenish numbers are 1, 7, 8, 49, and so on. 
+ Create an algorithm to find the nth sevenish number.
+ 
+ 
+ PLAN:
+ 
+ Call n the sevenish number
+ 
+ No repeats in the sum  only use numbers once
+ 
+ 						
+  7^0 = 1				1
+  7^1 = 7				7, 7+1 = 8
+  7^2 = 49				49, 49+1 = 50, 49+7 = 56, 
+  7^3 = 343				343, 343+1 = 344, 343+7,  343+49,  
+  7^4 = 2401 	
+ 
+ The power term dominates all of the sum terms so there will never be any over lap
+ 
+ put first power term in queue Q and in result vector  1
+ put second power term in queue Q and in temp and in  result vector  7
+ pop first term add to temp put back in Q   1 added to 7 =  8
+ put temp in result vector
+ pop second and put back in Q
+ zero temp                    
+ put third power term in queue and temp and in result			49
+ pop first term add to temp put back in Q put temp in result	50
+ pop second term add to temp put back in Q put temp in result	56
+ pop third term and put back in Q
+ zero temp
+ put 4th power term in Q and temp and result					343
+ pop first term add to temp put back in Q put temp in result	344
+ pop second term add to temp put back in Q put temp in result	350
+ pop third term add to temp put back in Q put temp in result	392
+ pop 4th term and put back in Q 
+ zero temp
